@@ -46,6 +46,12 @@ h1, h2, h3, h4, h5, h6{
 .section--reviews{
     background: linear-gradient(to bottom, #f39220, #fce38a);
 }
+
+.section--feedback{
+    background:linear-gradient(to bottom, #f39220, #fce38a);
+    max-width: 100%;
+    height: auto;
+}
 /* Intro */
 
 .intro{
@@ -151,8 +157,8 @@ h1, h2, h3, h4, h5, h6{
 
 .btn--center{
     font-size: 25px ;
-    position: absolute;
-    padding: 15px 60px;
+   
+    margin: 0 auto;
 
     
 }
@@ -292,6 +298,68 @@ h1, h2, h3, h4, h5, h6{
     transform: rotate(135deg);
 }
 
+/* About */
+.about{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.about__item{
+    width: 50%;
+}
+
+.about__item img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.about__title{
+    font-size: 25px;
+}
+
+.about__list{
+    background: linear-gradient(to bottom, #f39220, #fce38a);
+}
+
+/* Feedback */
+
+.feedback{
+
+    max-width: 100%;
+    height: auto;
+    
+    color: #fff;
+    padding: 50px 0;;
+
+}
+
+.feedback__item{
+    list-style-type: none;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 20px auto;
+
+}
+
+.feedback__item:before{
+    content: '✓';
+    padding-right: 20px;
+}
+
+.feedback__btn{
+    display: inline-block;
+    font-size: 35px;
+    padding: 15px 40px;
+    color: #fff;
+    background-color: #f39220;
+    border: 1px solid #f39220;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 30px 40%;
+}
 
 @media(max-width:1230px){
     /* Reviews */
