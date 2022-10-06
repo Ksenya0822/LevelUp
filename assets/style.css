@@ -1,8 +1,10 @@
 body{
+    scroll-behavior: smooth;
     margin: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    background-image: url(img/white-paper.png); 
-    
+    background-image: url(img/white-paper.png)   ; 
+    overflow-x: hidden;
     font-size: 15px;
     line-height: 1.6;
     color: #333; 
@@ -126,6 +128,7 @@ h1, h2, h3, h4, h5, h6{
 
 .text__item{
     font-size: 32px;
+    text-align: initial;
     color: #fff;
     margin-bottom: 25px;
     list-style-type: none;
@@ -141,7 +144,7 @@ h1, h2, h3, h4, h5, h6{
 /* Btn */
 
 .btn{
-
+    
    display: inline-block;
     vertical-align: top;
     font-size: 15px;
@@ -350,7 +353,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .feedback__btn{
-    display: inline-block;
+    display: table;
     font-size: 35px;
     padding: 15px 40px;
     color: #fff;
@@ -361,6 +364,157 @@ h1, h2, h3, h4, h5, h6{
     margin: 30px 40%;
 }
 
+/* Timer */
+
+.tags__timer{
+    display: flex;
+}
+
+.timer__title{
+    
+    width: 70%;
+    font-size: 45px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.timer__title span{
+    color: #f39220;
+}
+
+.timer__item{
+    font-size: 55px;
+    font-weight: 700;
+    color: red;
+    text-align: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+
+
+
+
+/* Feedform */
+.feedform{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feedform__col{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position: relative;
+}
+.feedform__inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.feedform__img{
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    max-height: 300px;
+    margin: 0 auto;
+}
+.feedform__img img{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+/* Price */
+.old__price{
+
+    
+    font-weight: 700;
+    color: #696969;
+    font-size: 50px;
+   
+   
+}
+
+
+
+
+.new__price{
+    position: absolute;
+    font-size: 80px;
+    font-weight: 700;
+    color: red;
+    bottom: 60px;
+    left: 150px;
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    z-index: 22;
+}
+
+
+ 
+.new__price:first-of-type {   
+    animation: showup 7s infinite;
+}
+      
+.new__price:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+}
+      
+.new__price:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+}
+      
+@keyframes showup {
+    0% {opacity:0;}
+    10% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+      
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+.form{
+    
+    margin: 0 auto;
+}
+.form__name,
+.form__phone{
+    width: 100%;
+    background: #fff;
+    height: 100px;
+    border:1px solid #e7e7e7;
+    color: #333;
+    line-height: 1.1;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 12px;
+    margin: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form__btn{
+    text-align: center;
+}
 @media(max-width:1230px){
     /* Reviews */
     .reviews__text{
@@ -381,9 +535,44 @@ h1, h2, h3, h4, h5, h6{
     .reviews__item{
         padding-left: 175px;
     }
+
+    .form__name, 
+    .form__phone {
+        width: 90%;
+    }
 }
 
 @media(max-width:770px){
+
+
+    .intro__inner{
+        text-align: center;
+    }
+    .intro__item{
+        width: 100%;
+    }
+
+    .intro__photo{
+        display: none;
+    }
+
+    .intro__title{
+        font-size: 35px;
+    }
+
+    .text__item{
+        font-size: 22px;
+    }
+    .structure--del{
+        display: none;
+    }
+    .structure__col{
+        width: 50%;
+    }
+
+    .feedback ul{
+        padding: 0;
+    }
      /* Reviews */
      .reviews__photo{
         margin: 0 auto 20px;
@@ -398,6 +587,43 @@ h1, h2, h3, h4, h5, h6{
 
     }
     
+    .feedback__item{
+        font-size: 30px;
+        margin: 0 auto;
+    }
+
+    .about__item{
+        width: 100%;
+        text-align: center;
+    }
+    .feedform__col{
+        
+        width: 100%;
+     
+    }
+
+   
+    
+    .timer__title{
+        font-size: 35px;
+    }
+
+    .timer__item{
+        font-size: 40px;
+    }
+
+    .old__price{
+        font-size: 30px;
+
+    }
+
+    .new__price{
+    font-size: 40px;
+    bottom: 10px;
+    left: 250px;
+    }
+   
+
 }
 
 @media(max-width:575px){
@@ -409,4 +635,24 @@ h1, h2, h3, h4, h5, h6{
     .reviews__btn{
         top: 18%;
     }
+    .tags__timer{
+        flex-wrap: wrap;
+    }
+    .timer__title{
+        width: 100%;
+     }
+     .timer__item{
+        width: 100%;
+        padding: 0;
+     }
+
+     .form{
+        padding-top: 150px;
+     }
+     .new__price{
+        left: 100px;
+        bottom: -50px;
+     }
+
+
 }

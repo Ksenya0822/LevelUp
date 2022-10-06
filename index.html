@@ -32,7 +32,7 @@
                         <li class="text__item" >Lorem ipsum dolor sit amet</li>
                         <li class="text__item" >Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm</li>       
                     </ul>
-                    <a class="btn " href="#">Узнать стоимость</a>
+                    <a class="btn " href="#form">Узнать стоимость</a>
                 </div>
             </div>
         </div>       
@@ -62,7 +62,7 @@
         </div>
 
         
-        <div class="structure__col">
+        <div class="structure__col structure--del">
             <img class="structure__photo" src="assets/img/prod.png" alt="">
         </div>
 
@@ -84,7 +84,7 @@
         </div>
     </div> <!--structure-->
     <div class="structure__btn">
-        <a class=" btn btn--center" href="#">Заказать</a>
+        <a class=" btn btn--center"   href="#form">Заказать</a>
     </div>
  </section>
 
@@ -149,11 +149,50 @@
                 <li class="feedback__item" >Lorem ipsum dolor sit amet</li>
                 <li class="feedback__item" >Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm</li>       
             </ul>
-        <a class="feedback__btn " href="#">Заказать</a>
+        <a class="feedback__btn"   href="#form">Заказать</a>
         </div>
     </div>
 </div>
-            
+ 
+<div class="section">
+    <div class="container">
+        <div class="tags__timer">
+            <div class="timer__title">
+                <span>Успей</span> купить 
+            </div>
+            <div class="timer__item">
+                <span id="timer">30:00</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section" id="form">
+    <div class="container">
+        <div class="feedform">
+            <div class="feedform__col">
+                <div class="feedform__inner">
+                    <img class="feedform__img" src="assets/img/prod.png" alt="">
+                    <div class="old__price"><s>3200</s></div>
+                    <div class="new__price">2500</div>
+                </div>
+            </div>
+            <div class="feedform__col">
+                <div class="form">
+                    <form action="app.php" method="POST">
+                        <input type="text" name="name" class="form__name" placeholder="Введите имя">
+                        <input type="text" name="phone"id="only_num" class="form__phone" placeholder="Введите телефон">
+                        <div class="form__btn"> 
+                            <a class="btn"  ><span>Оставить заявку</span></a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
         
 
 
